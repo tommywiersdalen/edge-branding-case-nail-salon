@@ -9,7 +9,7 @@
                     <p class="text-xs text-author">Skrevet av</p>
                     <div class="text-sx font-semibold">{{ props.post.user.name }}</div>
                 </div>
-                <div class="flex gap-2">
+                <div class="flex ml-2 gap-2">
                     <Link v-if="user" class="text-author hover:text-authorHover bg-bodyBackground rounded-md p-1"
                         :href="route('post.edit', { post: props.post.id })">
                     <FontAwesomeIcon icon="fa-pen-to-square" />
