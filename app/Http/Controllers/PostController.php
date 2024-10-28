@@ -6,7 +6,7 @@ use App\Models\Post;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use Termwind\Components\Dd;
+
 
 class PostController extends Controller
 {
