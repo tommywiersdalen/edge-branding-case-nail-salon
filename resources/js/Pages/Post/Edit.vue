@@ -33,10 +33,12 @@
     import SecondaryButton from '@/Components/SecondaryButton.vue';
     import { useForm } from '@inertiajs/vue3';
 
+
     const props = defineProps({
         post: Object
     })
 
+    console.log(props.post.image);
     const form = useForm({
         image: props.post.image,
         heading: props.post.heading,

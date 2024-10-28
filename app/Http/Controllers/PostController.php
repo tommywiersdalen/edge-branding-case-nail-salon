@@ -103,8 +103,12 @@ class PostController extends Controller
             'image.max' => 'filen kan ikke være større en 2mb',
 
         ]);
-        if ($request->hasFile('image')) {
+
+        if ($post->image) {
             Storage::disk('public')->delete($post->image);
+        }
+        if ($request->hasFile('image')) {
+
             $file = $request->file('image');
             $path = $file->store('image', 'public');
 
@@ -117,7 +121,7 @@ class PostController extends Controller
         } else {
 
             $post->update([
-                'image' =>  $request->image,
+                'image' =>  null,
                 'heading' => $request->heading,
                 'article' => $request->article
             ]);
