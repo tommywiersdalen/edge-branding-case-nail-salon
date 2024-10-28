@@ -1,14 +1,15 @@
 Simple blogg type app, made as demo case for Edge branding.
 
-run php artisan:migrate --seed to set up db
-default db driver is mySql
+Run php artisan:migrate --seed to set up db.
 
-then run php artisan serve or add to herd
+Default db driver is mySql
 
-then run npm run dev
+Then run php artisan serve or add to herd
 
-got to http://case-edge-branding-nail-salon.test/
+Then run npm run dev
 
-credentials for test user:
-user: torunn@turidsneglsalong.no
-password: password
+Go to http://case-edge-branding-nail-salon.test/
+
+Credentials for test user:
+User: torunn@turidsneglsalong.no
+Password: password
