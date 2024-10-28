@@ -104,6 +104,7 @@ class PostController extends Controller
 
         ]);
         if ($request->hasFile('image')) {
+            Storage::disk('public')->delete($post->image);
             $file = $request->file('image');
             $path = $file->store('image', 'public');
 
@@ -114,6 +115,7 @@ class PostController extends Controller
                 'article' => $request->article
             ]);
         } else {
+
             $post->update([
                 'image' =>  $request->image,
                 'heading' => $request->heading,
