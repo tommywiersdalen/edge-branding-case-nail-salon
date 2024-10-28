@@ -108,7 +108,7 @@ class PostController extends Controller
             $path = $file->store('image', 'public');
 
 
-            $request->user()->posts()->create([
+            $request->user()->posts()->update([
                 'image' =>  $path,
                 'heading' => $request->heading,
                 'article' => $request->article
