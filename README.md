@@ -2,7 +2,7 @@ Simple blogg type app, made as demo case for Edge branding.
 
 Run php artisan:migrate --seed to set up db.
 
-Default db driver is mySql.
+Db driver is mySql.
 
 Then run php artisan serve or add to herd.
 
