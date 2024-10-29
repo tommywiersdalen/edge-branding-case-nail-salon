@@ -55,8 +55,6 @@
         confirmDeletePost.value = false
     }
 
-
-
     const deletePost = () => {
         form.delete(route('post.destroy', { post: props.post.id }), {
             preserveScroll: true,
