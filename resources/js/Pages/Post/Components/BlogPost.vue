@@ -10,12 +10,10 @@
                     <div class="text-sx font-semibold">{{ props.post.user.name }}</div>
                 </div>
                 <div class="flex ml-2 gap-2">
-                    <Link v-if="user" class="text-author hover:text-authorHover bg-bodyBackground rounded-md p-1"
-                        :href="route('post.edit', { post: props.post.id })">
+                    <Link v-if="user" class="action-btn" :href="route('post.edit', { post: props.post.id })">
                     <FontAwesomeIcon icon="fa-pen-to-square" />
                     </Link>
-                    <button v-if="user" type="button" @click="openModal"
-                        class="text-author hover:text-authorHover bg-bodyBackground rounded-md p-1">
+                    <button v-if="user" type="button" @click="openModal" class="action-btn">
                         <FontAwesomeIcon icon="fa-trash-can" />
                     </button>
                 </div>

@@ -6,19 +6,15 @@
                 <img class="my-6" src="\images\assets\logo.png" alt="Turids Neglsalog logo">
                 </Link>
                 <div class="flex gap-2" v-if="user">
-                    <Link
-                        class="rounded-full px-4 py-2 border border-author text-white text-base bg-main hover:bg-mainHover"
-                        :href="route('post.create')">
+                    <Link class="header-alt-btn" :href="route('post.create')">
                     <FontAwesomeIcon class="mr-2 h-4" icon="fa-plus" /> Ny Bloggpost
                     </Link>
-                    <Link class="rounded-full px-4 py-2  text-white text-base bg-author hover:bg-authorHover"
-                        :href="route('logout')" method="post" as="button">
+                    <Link class="header-main-btn" :href="route('logout')" method="post" as="button">
                     <FontAwesomeIcon class="mr-2 h-4 rotate-180" icon="fa-right-to-bracket" /> Logg ut
                     </Link>
                 </div>
                 <div v-else>
-                    <Link class="rounded-full px-4 py-2  text-white text-base bg-author hover:bg-authorHover"
-                        href="login">
+                    <Link class="header-main-btn" href="login">
                     <FontAwesomeIcon class="mr-2 h-4" icon="fa-right-to-bracket" /> Logg inn
                     </Link>
                 </div>

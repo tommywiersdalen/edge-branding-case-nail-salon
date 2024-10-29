@@ -17,3 +17,22 @@ body {
 .form-input {
     @apply border rounded-md border-gray-600;
 }
+
+.action-btn {
+    @apply text-author hover:text-authorHover bg-bodyBackground rounded-md p-1;
+}
+
+.post-form-label {
+    @apply font-semibold text-xl;
+}
+
+.post-form-btn-container {
+    @apply flex justify-end mt-4 mx-8;
+}
+
+.header-main-btn {
+    @apply rounded-full px-4 py-2  text-white text-base bg-author hover:bg-authorHover;
+}
+.header-alt-btn {
+    @apply rounded-full px-4 py-2 border border-author text-white text-base bg-main hover:bg-mainHover;
+}
