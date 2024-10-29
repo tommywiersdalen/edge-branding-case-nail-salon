@@ -52,10 +52,11 @@ class PostController extends Controller
             'image.max' => 'filen kan ikke være større en 2mb',
 
         ]);
+
         if ($request->hasFile('image')) {
+
             $file = $request->file('image');
             $path = $file->store('images', 'public');
-
 
             $request->user()->posts()->create([
                 'image' =>  $path,
@@ -63,6 +64,7 @@ class PostController extends Controller
                 'article' => $request->article
             ]);
         } else {
+
             $request->user()->posts()->create([
                 'image' =>  null,
                 'heading' => $request->heading,
@@ -107,6 +109,7 @@ class PostController extends Controller
         if ($post->image) {
             Storage::disk('public')->delete($post->image);
         }
+
         if ($request->hasFile('image')) {
 
             $file = $request->file('image');
@@ -121,7 +124,7 @@ class PostController extends Controller
         } else {
 
             $post->update([
-                'image' =>  null,
+                'image' =>  $request->image,
                 'heading' => $request->heading,
                 'article' => $request->article
             ]);
@@ -132,7 +135,10 @@ class PostController extends Controller
 
     public function destroy(Post $post)
     {
-        Storage::disk('public')->delete($post->image);
+        if ($post->image) {
+            Storage::disk('public')->delete($post->image);
+        }
+
         $post->deleteOrFail();
         return redirect()->back()->with('success', 'Innlegget ble slettet');
     }
