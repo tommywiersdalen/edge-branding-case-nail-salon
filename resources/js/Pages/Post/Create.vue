@@ -24,7 +24,7 @@
     import Box from '@/Components/Box.vue';
     import InputError from '@/Components/InputError.vue';
 
-    import SecondaryButton from '@/Components/SecondaryButton.vue';
+
     import { useForm } from '@inertiajs/vue3';
 
     const form = useForm({

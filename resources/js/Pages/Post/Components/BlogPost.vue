@@ -38,9 +38,12 @@
 <script setup>
     import Box from '@/Components/Box.vue';
     import Modal from '@/Components/Modal.vue';
+
+
     import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
     import { Link, usePage, useForm } from '@inertiajs/vue3';
     import { ref } from 'vue';
+
     const props = defineProps({ post: Object })
     const user = usePage().props.auth.user;
     const form = useForm({

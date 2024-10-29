@@ -30,7 +30,7 @@
     import Box from '@/Components/Box.vue';
     import InputError from '@/Components/InputError.vue';
 
-    import SecondaryButton from '@/Components/SecondaryButton.vue';
+
     import { useForm } from '@inertiajs/vue3';
 
 
@@ -38,13 +38,13 @@
         post: Object
     })
 
-    console.log(props.post.image);
+
     const form = useForm({
         image: props.post.image,
         heading: props.post.heading,
         article: props.post.article,
     })
-    console.log(props);
-    const resetImage = () => props.post.image = null
+
+    const resetImage = () => form.image = null
     const update = () => form.post(route('post.update', { _method: 'put', post: props.post.id }))
 </script>
