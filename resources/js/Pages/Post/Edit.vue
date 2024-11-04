@@ -33,7 +33,6 @@
 
     import { useForm } from '@inertiajs/vue3';
 
-
     const props = defineProps({
         post: Object
     })
@@ -45,6 +44,14 @@
         article: props.post.article,
     })
 
-    const resetImage = () => form.image = null
-    const update = () => form.post(route('post.update', { _method: 'put', post: props.post.id }))
+    const resetImage = () => {
+        props.post.image = null
+        form.image = null
+    }
+
+    const update = () => {
+        form.post(route('post.update', { _method: 'put', post: props.post.id }))
+    }
+
+
 </script>

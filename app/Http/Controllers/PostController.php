@@ -106,7 +106,7 @@ class PostController extends Controller
 
         ]);
 
-        if ($post->image) {
+        if ($post->image && $post->image != $request->image) {
             Storage::disk('public')->delete($post->image);
         }
 
@@ -115,13 +115,16 @@ class PostController extends Controller
             $file = $request->file('image');
             $path = $file->store('image', 'public');
 
-
             $request->user()->posts()->update([
                 'image' =>  $path,
                 'heading' => $request->heading,
                 'article' => $request->article
             ]);
         } else {
+
+            if ($request->image == null &&  $post->image) {
+                Storage::disk('public')->delete($post->image);
+            }
 
             $post->update([
                 'image' =>  $request->image,
