@@ -121,7 +121,6 @@ class PostController extends Controller
                 'article' => $request->article
             ]);
         } else {
-
             if ($request->image == null &&  $post->image) {
                 Storage::disk('public')->delete($post->image);
             }
