@@ -33,6 +33,7 @@ body {
 .header-main-btn {
     @apply rounded-full px-4 py-2  text-white text-base bg-author hover:bg-authorHover;
 }
+
 .header-alt-btn {
     @apply rounded-full px-4 py-2 border border-author text-white text-base bg-main hover:bg-mainHover;
 }

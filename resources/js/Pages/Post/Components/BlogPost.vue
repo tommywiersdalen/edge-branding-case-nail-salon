@@ -44,10 +44,13 @@
 
     const props = defineProps({ post: Object })
     const user = usePage().props.auth.user;
+
     const form = useForm({
         post: props.post
     })
+
     let confirmDeletePost = ref(false)
+
     const openModal = () => {
         confirmDeletePost.value = true
     }

@@ -32,4 +32,5 @@
         article: null,
     })
     const create = () => form.post(route('post.store'))
+
 </script>

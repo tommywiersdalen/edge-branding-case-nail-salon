@@ -23,8 +23,6 @@ export default {
                 bodyBackground: '#EFEEE9',
                 author: '#9864FF',
                 authorHover: '#9864FF80'
-
-
             },
         },
     },

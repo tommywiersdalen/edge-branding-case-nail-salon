@@ -1,5 +1,5 @@
 <template>
-    <section v-if="posts.length" class="grid grid-cols-1 max-w-md  gap-y-4">
+    <section v-if="posts.length" class="grid grid-cols-1 max-w-md gap-y-4">
         <BlogPost v-for="post in posts" :post="post" :key="post.id" />
     </section>
     <section v-else>
@@ -8,6 +8,7 @@
 </template>
 <script setup>
     import BlogPost from './Components/BlogPost.vue';
+
     defineProps({
         posts: Array
     })

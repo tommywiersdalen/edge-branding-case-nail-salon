@@ -20,10 +20,10 @@
                 </div>
             </nav>
         </header>
-        <div class=" flex justify-end">
+        <div class="flex justify-end">
             <FlashMessage v-if="flashSuccess" :message="flashSuccess" />
         </div>
-        <main class="flex grow items-center justify-center mt-8 mb-8 ">
+        <main class="flex grow items-center justify-center mt-8 mb-8">
             <slot>Default</slot>
         </main>
         <footer class="bg-main w-full relative">

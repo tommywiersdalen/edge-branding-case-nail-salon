@@ -24,7 +24,9 @@
     onMounted(() => {
         isVisible.value = true;
     });
+
     setTimeout(() => {
         isVisible.value = false
     }, 3000);
+
 </script>
